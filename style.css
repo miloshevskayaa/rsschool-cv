@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Ubuntu:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+.maxwidth{
+    max-width: 1300px;
+    padding: 0 80;
+    margin:auto;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0;
+    background:rgb(137, 161, 197); 
+    font-family: "Ubuntu", sans-serif;
+}
+/* .navbar.sticky{
+    padding: 15px 0;
+    background:rgb(113, 183, 192);
+} */
+.navbar .maxwidth{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color:rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight:600;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block; 
+}
+.navbar .menu li a{
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.7s ease;
+}
+.navbar .menu li a:hover{
+    color:rgb(255, 255, 255);
+}
+
+/* menu btn styling */
+.menubtn{
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("./clouds1.jpg") no-repeat center;
+    height: 100vh;
+    color:rgb(0, 0, 0);
+    min-height: 500px;
+    font-family: "Ubuntu", sans-serif;
+}
+.home .maxwidth{
+    margin:auto 0 auto 40px;
+}
+.home .homecontent .text1{
+    font-size: 25px;
+}
+.home .homecontent .text2{
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .homecontent .text3{
+    font-size: 30px;
+    margin: 5px 0;
+    font-weight: 300;
+}
+.home .homecontent .text3 span{
+    color: rgb(72, 100, 138);
+    /* rgb(113, 183, 192); */
+}
+
+/* about section styling */
+section{
+    padding: 50px 0;
+    height: 100vh;
+}
+.aboutme{
+    font-family: "Poppins", sans-serif;
+}
+.aboutme .title{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    font-family: "Ubuntu", sans-serif;
+}
+.aboutme .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 140px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-50%);
+}
+.aboutme .title::after{
+    content: "who I am";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 15px;
+    color:rgb(72, 100, 138);
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    transform: translateX(-50%);
+}
+.aboutme .aboutmecontent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutme .aboutmecontent .left{
+    width: 45%;
+}
+.aboutme .aboutmecontent .left img{
+    height: 400px;
+    width: 400px;
+    /* object-fit:cover; */
+    border-radius: 6px;
+}
+.aboutme .aboutmecontent .right{
+    width: 55%;
+}
+.aboutme .aboutmecontent .right .text{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.aboutme .aboutmecontent .right .text span{
+    color:rgb(72, 100, 138);
+}
+.aboutme .aboutmecontent .right p{
+    text-align: justify;
+}
+.aboutme .aboutmecontent .right a{
+    display:inline-block;
+    background: rgb(137, 161, 197);
+    /* background: rgb(72, 100, 138); */
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight:500;
+    padding: 3px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(137, 161, 197);
+    transition: all 0.6s ease;
+}
+.aboutme .aboutmecontent .right a:hover{
+    color:rgb(0, 0, 0);
+    background: none;
+}
+
+/* responsive media query start (запуск адаптивного медиа-запроса) */
+@media (max-width: 991px){
+    .maxwidth{
+        padding: 0 50px;
+    }
+    .menubtn{
+        display: block;
+        z-index: 999;
+    }
+    .menubtn i.active:before{
+        content: "\f00d";
+
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background:rgb(137, 161, 197); 
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.6s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    color: black;
+    background-color: #e6e6e6;
+} 
+
+.name{
+    background-color: rgb(255, 255, 255);
+    animation-name: colorchange; 
+    animation-duration: 8s; 
+    animation-iteration-count: 2; 
+    animation-direction: alternate;
+    margin-top: 10px;
+}
+
+@keyframes colorchange{
+    from {background-color: rgb(255, 255, 255);}
+    to{background-color:rgb(113, 183, 192);}
+}
+
