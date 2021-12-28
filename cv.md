@@ -4,7 +4,7 @@
 ### Home
 
 ### About me
-I'm Dana and I'm front-end developer. I study in college.
+I'm Dana and I'm front-end developer. I study in college in Minsk.
 
 ### Skills
 * #### HTML
