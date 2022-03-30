@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Ubuntu:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&family=Ubuntu:wght@400;700&display=swap");
 *{
     margin: 0;
     padding: 0;
     box-sizing:border-box;
     text-decoration: none;
+
 }
 .maxwidth{
     max-width: 1300px;
     padding: 0 80;
-    margin:auto;
+    justify-content: space-between;
 }
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -18,10 +20,6 @@
     background:rgb(137, 161, 197); 
     font-family: "Ubuntu", sans-serif;
 }
-/* .navbar.sticky{
-    padding: 15px 0;
-    background:rgb(113, 183, 192);
-} */
 .navbar .maxwidth{
     display: flex;
     align-items: center;
@@ -32,7 +30,6 @@
     font-size: 28px;
     font-weight:600;
 }
-
 .navbar .menu li{
     list-style: none;
     display: inline-block; 
@@ -48,18 +45,11 @@
     color:rgb(255, 255, 255);
 }
 
-/* menu btn styling */
-.menubtn{
-    color: rgb(0, 0, 0);
-    font-size: 23px;
-    cursor: pointer;
-    display: none;
-}
-
 /* home section styling */
 .home{
     display: flex;
-    background: url("./clouds1.jpg") no-repeat center;
+    background: url("./assets/clouds1.jpg") no-repeat center;
+    background-size: cover;
     height: 100vh;
     color:rgb(0, 0, 0);
     min-height: 500px;
@@ -83,23 +73,20 @@
 }
 .home .homecontent .text3 span{
     color: rgb(72, 100, 138);
-    /* rgb(113, 183, 192); */
 }
 
 /* about section styling */
-section{
-    padding: 50px 0;
-    height: 100vh;
-}
 .aboutme{
     font-family: "Poppins", sans-serif;
+    background-color: #e4e4e6;
+    padding: 60px 0 0 0;
 }
 .aboutme .title{
     position: relative;
     text-align: center;
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding-bottom: 15px;
     font-family: "Ubuntu", sans-serif;
 }
@@ -121,111 +108,275 @@ section{
     font-size: 15px;
     color:rgb(72, 100, 138);
     padding: 5px;
-    background: rgb(255, 255, 255);
+    background: #e4e4e6;
     transform: translateX(-50%);
 }
-.aboutme .aboutmecontent{
+.aboutmecontent{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-.aboutme .aboutmecontent .left{
-    width: 45%;
+.aboutmecontent img{
+    height: 375px;
+    width: 375px;
+    border-radius: 1000px;
 }
-.aboutme .aboutmecontent .left img{
-    height: 400px;
-    width: 400px;
-    /* object-fit:cover; */
-    border-radius: 6px;
-}
-.aboutme .aboutmecontent .right{
+.aboutmecontent .aboutmetext{
     width: 55%;
 }
-.aboutme .aboutmecontent .right .text{
+.aboutmecontent .text{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.aboutmecontent .text span{
+    color:rgb(72, 100, 138);
+}
+.aboutmecontent p{
+    text-align: justify;
+    font-weight: 350;
+    margin-top: 10px;
     font-size: 20px;
+}
+
+/* skills section styling */
+.skills{
+    background-color: #e4e4e6;
+    font-family: "Poppins", sans-serif;
+    padding: 60px 0 0 0;
+}
+.skills .title{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+    font-family: "Ubuntu", sans-serif;
+}
+.skills .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 140px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-50%);
+}
+.skills .title::after{
+    content: "what I can";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 15px;
+    color:rgb(72, 100, 138);
+    padding: 5px;
+    background: #e4e4e6;
+    transform: translateX(-50%);
+}
+.skillscontent{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+
+}
+.skillscontent .titles{
+    font-size: 25px;
+    text-align: center;
     font-weight: 400;
     margin-bottom: 10px;
 }
-.aboutme .aboutmecontent .right .text span{
+.skillscontent .line{
+    height: 2px;
+    width: 50%;
+    background: rgb(137, 161, 197);
+    margin-left: 25%;
+}
+.skillscontent .bars{
+    line-height: 40px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* education section styling */
+
+.education{
+    background-color: #e4e4e6;
+    font-family: "Poppins", sans-serif;
+    padding: 60px 0;
+}
+.education .title{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+    font-family: "Ubuntu", sans-serif;
+}
+.education .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 140px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-50%);
+}
+.education .title::after{
+    content: "knowledge";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 15px;
+    color:rgb(72, 100, 138);
+    padding: 5px;
+    background: #e4e4e6;
+    transform: translateX(-50%);
+}
+.education .educationcontent{
+    margin-bottom: 50px;
+    font-weight: 300;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.education .educationcontent b{
+    font-weight: 400;
+}
+
+.english{
+    background-color: #e4e4e6;
+    font-family: "Poppins", sans-serif;
+}
+.levelEng{
+    text-align: center;
+}
+.titleEnglish{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+    font-family: "Ubuntu", sans-serif;
+}
+.titleEnglish::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 140px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-50%);
+}
+.titleEnglish::after{
+    content: "level";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 15px;
+    color:rgb(72, 100, 138);
+    padding: 5px;
+    background: #e4e4e6;
+    transform: translateX(-50%);
+}
+
+/* contacts section styling */
+.contacts{
+    background-color: #e4e4e6;
+    font-family: "Poppins", sans-serif;
+    padding: 60px 0;
+}
+.contacts .title{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    font-family: "Ubuntu", sans-serif;
+    margin-top: -30px;
+}
+.contacts .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 140px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-50%);
+}
+.contacts .title::after{
+    content: "get in touch";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 15px;
+    color:rgb(72, 100, 138);
+    padding: 5px;
+    background: #e4e4e6;
+    transform: translateX(-50%);
+}
+.contacts .contactscontent{
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+}
+.contacts .contactscontent p{
+    display: flex;
+    align-items: center;
+}
+.contacts .contactscontent a{
+    font-size: 17px;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    color:black;
+}
+.contacts .contactscontent a:hover{
     color:rgb(72, 100, 138);
 }
-.aboutme .aboutmecontent .right p{
-    text-align: justify;
+
+
+.cv-footer{
+    background-color: rgb(137, 161, 197);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    
 }
-.aboutme .aboutmecontent .right a{
-    display:inline-block;
-    background: rgb(137, 161, 197);
-    /* background: rgb(72, 100, 138); */
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-weight:500;
-    padding: 3px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid rgb(137, 161, 197);
-    transition: all 0.6s ease;
-}
-.aboutme .aboutmecontent .right a:hover{
-    color:rgb(0, 0, 0);
-    background: none;
+.cv-footer a{
+    color:black;
 }
 
-/* responsive media query start (запуск адаптивного медиа-запроса) */
-@media (max-width: 991px){
-    .maxwidth{
-        padding: 0 50px;
-    }
-    .menubtn{
-        display: block;
-        z-index: 999;
-    }
-    .menubtn i.active:before{
-        content: "\f00d";
+.cv-footer-item{
+    padding: 15px;
+}
+.cv-footer-img {
+    width: 100px;
 
-    }
-    .navbar .menu{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background:rgb(137, 161, 197); 
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.6s ease;
-    }
-    .navbar .menu.active{
-        left: 0;
-    }
-    .navbar .menu li{
-        display: block;
-    }
-    .navbar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
 }
 
-header{
-    width: 100%;
-    height: 50px;
-    color: black;
-    background-color: #e6e6e6;
-} 
-
-.name{
-    background-color: rgb(255, 255, 255);
-    animation-name: colorchange; 
-    animation-duration: 8s; 
-    animation-iteration-count: 2; 
-    animation-direction: alternate;
-    margin-top: 10px;
-}
-
-@keyframes colorchange{
-    from {background-color: rgb(255, 255, 255);}
-    to{background-color:rgb(113, 183, 192);}
+@media screen and (max-width: 1000px) {
+    .aboutme .aboutmecontent{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;  
+    }
+    .aboutme .aboutmecontent .right{
+        width: 55%;
+        margin-top: 30px;
+    }
 }
 
